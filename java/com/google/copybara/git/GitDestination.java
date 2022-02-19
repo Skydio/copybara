@@ -513,7 +513,7 @@ public class GitDestination implements Destination<GitRevision> {
 
       console.progress("Git Destination: Excluding files");
       try (ProfilerTask ignored = generalOptions.profiler().start("exclude_files")) {
-        excludedAdder.add();
+        excludedAdder.add(console);
       }
 
       console.progress("Git Destination: Creating a local commit");
